@@ -22,7 +22,7 @@
 
 .button.ghost{
     color: var(--black);
-    border: 1px solid var(--grey-light);
+    border: 1px solid var(--gray-light);
     background-color: var(--white);
 }
 
