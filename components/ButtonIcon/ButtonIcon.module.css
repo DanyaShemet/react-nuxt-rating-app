@@ -1,0 +1,40 @@
+
+
+.button{
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 0;
+}
+
+.button.primary{
+    background-color: var(--primary);
+}
+.button.primary svg * {
+    fill: var(--white)
+}
+.button.primary:hover{
+    background-color: var(--primary-hover);
+}
+
+.button.white{
+    background-color: var(--white);
+}
+.button.white svg * {
+    fill: var(--primary)
+}
+
+.button.white:hover{
+    background-color: var(--primary);
+}
+
+.button.white:hover svg *{
+    fill: var(--white)
+}
+
+

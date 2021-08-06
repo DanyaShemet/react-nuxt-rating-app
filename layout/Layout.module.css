@@ -10,7 +10,7 @@
 }
 .header{
     grid-area: header;
-    display: none;
+  
 }
 .sidebar{
     grid-area: sidebar;
@@ -40,5 +40,6 @@
         "body"
         "footer";
         grid-template-columns: minmax(320px, 1fr);
+        gap: 10px;
     }
 }

@@ -1,19 +1,31 @@
-.p{
-    font-weight: 400;
-    font-size: 16px;
-    margin: 0;
+.header{
+    display: none;
+ 
 }
 
+.mobileMenu{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #F5F6F8;
+    overflow-y: scroll;
+    padding: 20px 10px;
+}
+.menuClose{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 11;
+}
 
-.p.s{
-    font-size: 14px;
-    line-height: 24px;
-}
-.p.m{
-    font-size: 16px;
-    line-height: 24px;
-}
-.p.l{
-    font-size: 18px;
-    line-height: 29px;
+@media (max-width: 768px) {
+    .header{
+        display: grid;
+        grid-template-columns: 1fr 40px;
+        gap: 10px;
+        margin: 15px 15px 0 15px;
+    }
 }

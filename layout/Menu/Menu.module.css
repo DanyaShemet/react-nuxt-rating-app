@@ -43,15 +43,10 @@
     border-left: 1px solid #DFDFDF;
 }
 .secondLevelBlock{
-    display: none;
+   overflow: hidden;
 }
-.secondLevelBlockOpened{
-    display: block;
-    color: var(--primary);
-}
-.secondLevelBlockOpened:last-child{
-    margin-bottom: 20px;
-}
+
+
 
 .thirdLevel{
     color: var(--gray-dark);
