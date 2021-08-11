@@ -10,8 +10,10 @@ import { SortEnum } from '../../components/Sort/Sort.props';
 import { sortReducer } from './sort.reducer';
 import { useEffect } from 'react';
 import { useScrollY } from '../../hooks/useScrollY';
+import { useReducedMotion } from 'framer-motion';
 
 export const TopPageComponent = ({page, products, firstCategory, ...props}: TopPageComponentProps) :JSX.Element => {
+    const shouldReducedMotion = useReducedMotion();
 
     const [{products: sortedProducts, sort}, dispatchSort] = useReducer(sortReducer, {products, sort: SortEnum.Rating });
     const y = useScrollY();
@@ -20,7 +22,7 @@ export const TopPageComponent = ({page, products, firstCategory, ...props}: TopP
     };
 
     useEffect(() => {
-        dispatchSort({type: 'reset', initialState: products})  
+        dispatchSort({type: 'reset', initialState: products});
     }, [products]);
 
     return (
@@ -28,13 +30,13 @@ export const TopPageComponent = ({page, products, firstCategory, ...props}: TopP
         
             <div className={styles.title}>
                 <Htag tag='h1'>{page.title}</Htag>
-                {products && <Tag color='gray' size='m'>{products.length}</Tag>}
+                {products && <Tag color='gray' size='m' aria-label={products.length + 'элементов'}>{products.length}</Tag>}
         
                 <Sort sort={sort} setSort={setSort}/>
             </div>
 
-            <div>
-                {sortedProducts && sortedProducts.map(p => (<Product key={p._id} product={p} layout/>))}
+            <div role="list">
+                {sortedProducts && sortedProducts.map(p => (<Product role="listitem" key={p._id} product={p} layout={shouldReducedMotion ? false : true}/>))}
             </div>
 
             <div className={styles.hhTitle}>

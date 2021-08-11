@@ -7,11 +7,12 @@ import { motion } from 'framer-motion';
 import { SideBar } from '../SideBar/SideBar';
 import { useState, useEffect } from 'react';
 import {useRouter} from 'next/router';
+import { useReducedMotion } from 'framer-motion';
 
 export const Header = ({className, ...props}:HeaderProps ) :JSX.Element => {
     const router = useRouter();
     const [isOpened, setIsOpened] = useState<boolean>(false);
-
+    const shouldReducedMotion = useReducedMotion();
     useEffect(() => {
         setIsOpened(false);
     }, [router]);
@@ -25,7 +26,7 @@ export const Header = ({className, ...props}:HeaderProps ) :JSX.Element => {
             }
         },
         closed: {
-            opacity: 0,
+            opacity: shouldReducedMotion ? 1 : 0,
             x: '100%'
         }
     }

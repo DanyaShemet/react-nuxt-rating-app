@@ -40,11 +40,19 @@
 .secondBlock{
     margin-left: 12px;
     margin-top: 15px;
-    padding-left: 32px;
     border-left: 1px solid #DFDFDF;
+    list-style: none;
+    padding: 0 0 0 32px;
 }
 .secondLevelBlock{
    overflow: hidden;
+   list-style: none;
+   padding: 0;
+}
+.secondBlock button{
+    background: none;
+    border: 0;
+    padding: 0;
 }
 
 
@@ -64,4 +72,9 @@
 .thirdLevel:hover,
 .thirdLevelActive{
     color: var(--primary);
+}
+
+.firstLevelList{
+    list-style: none;
+    padding: 0;
 }

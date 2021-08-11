@@ -19,7 +19,7 @@ export const Review = ({review, className, ...props}: ReviewProps) :JSX.Element 
             </div>
             <div className={styles.createdDate}>
                 {format(new Date(createdAt), 'dd MMMM yyyy', {locale: ru})}
-            </div>
+            </div> 
             <div className={styles.rating}>
                <Rating rating={rating}/>
             </div>

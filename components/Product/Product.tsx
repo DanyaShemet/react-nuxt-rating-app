@@ -57,24 +57,27 @@ export const Product = motion(forwardRef(({product, className, ...props}: Produc
                {product.title}
             </div>
             <div className={styles.price}>
-               {priceRu(product.price)}
-               {product.oldPrice && <Tag color='green' className={styles.oldPrice}>{priceRu(product.price - product.oldPrice)}</Tag>}
+              <span><span className='visualyHidden'>цена</span> {priceRu(product.price)}</span>
+               {product.oldPrice && <Tag color='green' className={styles.oldPrice}>
+                 <span className='visualyHidden'>скидка</span>
+                 {priceRu(product.price - product.oldPrice)}</Tag>}
             </div>
             <div className={styles.credit}>
-               {priceRu(product.credit)} 
+              <span><span className='visualyHidden'>кредит</span> {priceRu(product.credit)}</span>
                /
                <span className={styles.month}>мес</span>
             </div>
             <div className={styles.rating}>
+              <span className='visualyHidden'>{'рейтинг' + (product.reviewAvg ?? product.initialRating)}</span>
                 <Rating rating={product.reviewAvg ?? product.initialRating}/>
             </div>
             <div className={styles.tags}>
                 {product.categories.map(c => <Tag color="ghost" key={c} className={styles.category}> {c} </Tag>)}
             </div>
-            <div className={styles.priceTitle}>
+            <div className={styles.priceTitle} aria-hidden={true}>
               цена
             </div>
-            <div className={styles.creditTitle}>
+            <div className={styles.creditTitle} aria-hidden={true}>
               кредит
             </div>
             <div className={styles.rateTitle}>
@@ -119,7 +122,7 @@ export const Product = motion(forwardRef(({product, className, ...props}: Produc
             <div className={styles.actions}>
                 <Button appearance="primary">Узнать подробнее</Button>
                 <Button appearance="ghost" arrow={isReviewOpened ? 'down' :'right'} className={styles.reviewBtn} 
-                onClick={() => setIsReviewOpened(!isReviewOpened)}>Читать отзывы</Button>
+                onClick={() => setIsReviewOpened(!isReviewOpened)} aria-expanded={true}>Читать отзывы</Button>
             </div>
 
         </Card>

@@ -3,7 +3,7 @@ import styles from './Search.module.css';
 import cn from 'classnames';
 import { Button } from '../Button/Button';
 import { Input } from '../Input/Input';
-import { useState } from 'react';
+import { useState, KeyboardEvent } from 'react';
 import SearchSVG from './search.svg';
 import { useRouter } from 'next/router';
 export const Search = ({className, ...props}: SearchProps) :JSX.Element => {
@@ -27,21 +27,21 @@ export const Search = ({className, ...props}: SearchProps) :JSX.Element => {
     };
 
     return (
-        <div className={cn(className, styles.search)} {...props}>
+        <form className={cn(className, styles.search)} {...props} role="search">
                 <Input 
                     placeholder='Поиск...' 
                     value={search} 
                     onChange={(e) => setSearch(e.target.value)} 
                     className={cn(className, styles.input)}
-                    onKeyDown={handleKeyDown}
-                    />
-                <Button 
+                    onKeyDown={(e) => handleKeyDown(e)}/>
+                <Button
+                    aria-label="Искать по сайту"
                     appearance='primary' 
                     className={styles.button} 
                     onClick={goToSearch}>
                     <SearchSVG />
                 </Button>
-        </div>
+        </form>
     );
 };
 
