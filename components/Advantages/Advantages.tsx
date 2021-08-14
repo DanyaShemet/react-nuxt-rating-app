@@ -1,6 +1,6 @@
 import { AdvantagesProps } from './Advantages.props';
 import styles from './Advantages.module.css';
-import cn from 'classnames';
+
 import React from 'react';
 import CheckSVG from './check.svg';
 

@@ -80,7 +80,7 @@ export const ReviewForm = ({productId, isOpened ,className, ...props}: ReviewFor
                     <div>
                         Спасибо, ваш отзыв будет опубликов после проверки
                     </div>
-                    <button tabIndex={isSuccess ? 0 : -1} className={styles.close} onClick={() => {setIsSuccess(false)}} aria-label="Закрыть оповещение">
+                    <button tabIndex={isSuccess ? 0 : -1} className={styles.close} onClick={() => {setIsSuccess(false);}} aria-label="Закрыть оповещение">
                         <CloseSVG  />
                     </button>
                
@@ -89,7 +89,7 @@ export const ReviewForm = ({productId, isOpened ,className, ...props}: ReviewFor
             {error && 
                 <div className={cn(styles.panel, styles.error)} role="alert">
                     Что то пошло не так, попробуйте обновить страницу
-                    <button tabIndex={error ? 0 : -1} className={styles.close} onClick={() => {setError(undefined)}} aria-label="Закрыть оповещение">
+                    <button tabIndex={error ? 0 : -1} className={styles.close} onClick={() => {setError(undefined);}} aria-label="Закрыть оповещение">
                         <CloseSVG  />
                     </button>
                

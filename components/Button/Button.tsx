@@ -3,7 +3,7 @@ import styles from './Button.module.css';
 import ArrowIcon from './arrow.svg';
 import cn from 'classnames';
 import { motion, useMotionValue } from 'framer-motion';
-import { useEffect } from 'react';
+
 
 export const Button = ({children, arrow = 'none', appearance, className, ...props}: ButtonProps) :JSX.Element => {
     

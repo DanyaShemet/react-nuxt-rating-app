@@ -9,13 +9,15 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "stylelint": "stylelint \"**/*.css\" --fix"
+    "stylelint": "stylelint \"**/*.css\" --fix",
+    "export": "next export"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "cross-env": "^7.0.3",
     "date-fns": "^2.22.1",
     "framer-motion": "^4.1.17",
+    "live-server": "^1.2.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-hook-form": "^7.12.2",

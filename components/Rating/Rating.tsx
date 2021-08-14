@@ -55,6 +55,7 @@ export const Rating = forwardRef(({error, isEditable = false, rating, setRating,
 
         setRatingArray(updatedArray);
     };
+    
 
     const hoverRating = (rating:number) => {
         if  (!isEditable){
