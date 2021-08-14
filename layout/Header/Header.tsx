@@ -29,7 +29,7 @@ export const Header = ({className, ...props}:HeaderProps ) :JSX.Element => {
             opacity: shouldReducedMotion ? 1 : 0,
             x: '100%'
         }
-    }
+    };
 
     return (
        <header className={cn(className, styles.header)} {...props}>
