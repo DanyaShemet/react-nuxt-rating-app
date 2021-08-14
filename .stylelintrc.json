@@ -10,6 +10,8 @@
 		"indentation": [
 			"tab"
 		],
+		"declaration-block-single-line-max-declarations": 100,
+		"no-descending-specificity": null,
 		"color-hex-case": "upper"
 	}
 }
