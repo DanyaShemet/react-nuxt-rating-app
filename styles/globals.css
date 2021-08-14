@@ -2,6 +2,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+
 	color: var(--black);
 	background-color: #F5F6F8;
 
@@ -18,23 +19,25 @@ a {
 	box-sizing: border-box;
 }
 
-.visualyHidden{
+.visualyHidden {
+	position: absolute;
+
+	overflow: hidden;
+
 	width: 0;
 	height: 0;
-	overflow: hidden;
-	position: absolute;
 }
 
 :root {
 	--black: #3B434E;
 	--gray-light: #EBEBEB;
-	--gray-dark: #6c7077;
+	--gray-dark: #6C7077;
 	--white: white;
-	--primary: #7351f5;
-	--primary-hover: #613aff;
+	--primary: #7351F5;
+	--primary-hover: #613AFF;
 	--red: #FC836D;
-	--red-light: #f7b1a5;
-	--green: #127a4f; 
+	--red-light: #F7B1A5;
+	--green: #127A4F;
 	--green-light: #C8F8E4;
 	--font-family: 'Noto Sans KR', sans-serif;
 }

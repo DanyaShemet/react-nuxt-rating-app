@@ -1,19 +1,21 @@
-.p{
-    font-weight: 400;
-    font-size: 16px;
-    margin: 0;
+.p {
+	margin: 0;
+
+	font-size: 16px;
+	font-weight: 400;
 }
 
+.p.s {
+	font-size: 14px;
+	line-height: 24px;
+}
 
-.p.s{
-    font-size: 14px;
-    line-height: 24px;
+.p.m {
+	font-size: 16px;
+	line-height: 24px;
 }
-.p.m{
-    font-size: 16px;
-    line-height: 24px;
-}
-.p.l{
-    font-size: 18px;
-    line-height: 29px;
+
+.p.l {
+	font-size: 18px;
+	line-height: 29px;
 }

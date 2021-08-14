@@ -1,80 +1,96 @@
-.menu{
-    
+
+
+.firstLevel {
+	display: grid;
+	align-items: center;
+
+	margin-top: 20px;
+
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 25px;
+	grid-template-columns: 24px 1fr;
+	gap: 20px;
 }
 
-.firstLevel{
-    display: grid;
-    grid-template-columns: 24px 1fr;
-    gap: 20px;
-    align-items: center;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 25px;
-    margin-top: 20px;
+.firstLevel:hover {
+	color: var(--primary);
 }
-.firstLevel:hover{
-    color: var(--primary);
-}
-.firstLevelActive{
-    color: var(--primary);
+
+.firstLevelActive {
+	color: var(--primary);
 }
 
 .firstLevelActive svg,
-.firstLevel:hover svg{
-    fill: var(--primary);
+.firstLevel:hover svg {
+	fill: var(--primary);
 }
 
-.secondLevel{
-    margin-bottom: 10px;
-    cursor: pointer;
-    text-transform: uppercase;
-    color: var(--gray-dark);
-    font-size: 12px;
-    font-weight: 300;
-    line-height: 16px;
-    outline-offset: -1px;
-}
-.secondLevel:hover{
-    color: var(--primary);
-}
-.secondBlock{
-    margin-left: 12px;
-    margin-top: 15px;
-    border-left: 1px solid #DFDFDF;
-    list-style: none;
-    padding: 0 0 0 32px;
-}
-.secondLevelBlock{
-   overflow: hidden;
-   list-style: none;
-   padding: 0;
-}
-.secondBlock button{
-    background: none;
-    border: 0;
-    padding: 0;
+.secondLevel {
+	margin-bottom: 10px;
+
+	cursor: pointer;
+	text-transform: uppercase;
+
+	color: var(--gray-dark);
+	outline-offset: -1px;
+
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 16px;
 }
 
+.secondLevel:hover {
+	color: var(--primary);
+}
 
+.secondBlock {
+	margin-top: 15px;
+	margin-left: 12px;
+	padding: 0 0 0 32px;
 
-.thirdLevel{
-    color: var(--gray-dark);
-    display: block;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 19px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    outline-offset: -1px;
+	list-style: none;
 
+	border-left: 1px solid #DFDFDF;
+}
+
+.secondLevelBlock {
+	overflow: hidden;
+
+	padding: 0;
+
+	list-style: none;
+}
+
+.secondBlock button {
+	padding: 0;
+
+	border: 0;
+	background: none;
+}
+
+.thirdLevel {
+	display: block;
+
+	margin-bottom: 10px;
+
+	cursor: pointer;
+
+	color: var(--gray-dark);
+	outline-offset: -1px;
+
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 19px;
 }
 
 .thirdLevel:hover,
-.thirdLevelActive{
-    color: var(--primary);
+.thirdLevelActive {
+	color: var(--primary);
 }
 
-.firstLevelList{
-    list-style: none;
-    padding: 0;
+.firstLevelList {
+	padding: 0;
+
+	list-style: none;
 }
